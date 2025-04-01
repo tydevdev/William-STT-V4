@@ -1,0 +1,3 @@
+Model Training/**/*.wav
+Model Training/**/*.pt
+Model Training/**/*.pth
