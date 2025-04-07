@@ -18,10 +18,17 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, friend.")
             Text("William uses an iPhone 16 Pro Max")
-            Text("Please make the buttons and text large and accessible.")
+            Text("Please make the buttons and text large and accessible.").frame(maxHeight: .infinity)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                
+            Button(action: {
+            }) {
+                Text("Record")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .font(.title)
+                    .bold()
+            }.buttonStyle(.borderedProminent)
         }
         .padding()
     }
