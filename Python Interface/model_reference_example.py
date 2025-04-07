@@ -13,6 +13,7 @@ numpy
 tqdm
 jiwer
 git+https://github.com/openai/whisper.git
+---
 pysoundfile
 torchvision
 torchaudio
