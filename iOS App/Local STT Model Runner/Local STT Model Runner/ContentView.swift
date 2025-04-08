@@ -6,37 +6,48 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct ContentView: View {
-    @State var isRecording : Bool = false;
+    @EnvironmentObject var status : RecordingManager
     var body: some View {
         VStack {
             
-            Text("Text to speech app")
+            Text("Text to speech prototype")
                 .padding().bold()
             ScrollView(.vertical) {
-                Text("Press Record to Begin...")
+                Text(status.transcription)
                     .font(.system(size: 35)).bold()
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
             Button(action: {
-                Test()
-                isRecording.toggle()
+                status.OnPressButton()
             }) {
                 HStack {
-                    Image(systemName: isRecording ? "stop.fill" : "microphone").bold()
+                    Image(systemName: status.buttonIcon).bold()
                         .font(.system(size: 40))
-                    Text(isRecording ? "Stop" : "Record")
+                    Text(status.buttonLabel)
                         .font(.system(size: 40))
                         .bold()
                     
                 }.padding()
                     .frame(maxWidth: .infinity, minHeight: 150)
-            }.buttonStyle(.borderedProminent).tint(isRecording ? .red : .blue)
+            }.buttonStyle(.borderedProminent)
+                .tint(status.buttonColor)
+                .disabled(status.buttonDisabled)
         }
         .padding()
+        
+        .alert(isPresented: $status.showMicrophonePermissionAlert) {
+                    Alert(
+                        title: Text("Microphone Access Denied"),
+                        message: Text("Please enable microphone access in Settings to record audio."),
+                        primaryButton: .default(Text("Settings"), action: openSettings),
+                        secondaryButton: .cancel()
+                    )
+                }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(RecordingManager(status: RecordingManager.Status.busy))
 }
