@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct Local_STT_Model_RunnerApp: App {
+    init() {
+        print("Test...")
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

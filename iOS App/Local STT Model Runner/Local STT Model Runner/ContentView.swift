@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isRecording : Bool = false;
     var body: some View {
         VStack {
             
-            Text("Future transcript over here!")
-                 .padding()
-            Image(systemName: "microphone")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, friend.")
-            Text("William uses an iPhone 16 Pro Max")
-            Text("Please make the buttons and text large and accessible.").frame(maxHeight: .infinity)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
+            Text("Text to speech app")
+                .padding().bold()
+            ScrollView(.vertical) {
+                Text("Press Record to Begin...")
+                    .font(.system(size: 35)).bold()
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
             Button(action: {
+                Test()
+                isRecording.toggle()
             }) {
-                Text("Record")
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .font(.title)
-                    .bold()
-            }.buttonStyle(.borderedProminent)
+                HStack {
+                    Image(systemName: isRecording ? "stop.fill" : "microphone").bold()
+                        .font(.system(size: 40))
+                    Text(isRecording ? "Stop" : "Record")
+                        .font(.system(size: 40))
+                        .bold()
+                    
+                }.padding()
+                    .frame(maxWidth: .infinity, minHeight: 150)
+            }.buttonStyle(.borderedProminent).tint(isRecording ? .red : .blue)
         }
         .padding()
     }
