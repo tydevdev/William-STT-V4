@@ -26,3 +26,5 @@ Model Training/**/*.wav
 # (Optional) Other common ignores:
 # Node modules if you work with JavaScript/TypeScript in VSCode
 node_modules/
+
+*.a
