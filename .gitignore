@@ -1,4 +1,4 @@
 Model Training/**/*.wav
 *.pt
 *.pth
-*.a
+/Pods/
