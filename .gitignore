@@ -1,3 +1,4 @@
 Model Training/**/*.wav
 **/*.pt
 **/*.pth
+**/.venv
