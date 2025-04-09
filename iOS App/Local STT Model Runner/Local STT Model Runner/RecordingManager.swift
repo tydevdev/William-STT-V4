@@ -27,6 +27,8 @@ class RecordingManager : ObservableObject {
             }
         }
     }
+    
+    private var recordingPath : URL?
 
     func startRecording() {
         if !microphoneAllowed {
@@ -48,22 +50,21 @@ class RecordingManager : ObservableObject {
             ]
             
             guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                    print("❌ Could not find the documents directory")
+                    print("Could not find the documents directory")
                     return
                 }
+            
+            let startTime = Date.now
 
-            let fileName = "willAudio_YYYY-MM-DD_start-HHMMSS_duration-HHMMSS_appTest.wav"
+            let fileName = "willAudio_\(startTime.ISO8601Format())_appTest.wav"
             let filePath = documentsURL.appendingPathComponent(fileName)
+            recordingPath = filePath
 
             audioRecorder = try AVAudioRecorder(url: filePath, settings: settings)
             audioRecorder?.prepareToRecord()
             audioRecorder?.record()
 
             print("Recording started, saving to \(filePath.path)")
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                self.stopRecording()
-            }
 
         } catch {
             print("Failed to set up recorder:", error)
@@ -73,6 +74,13 @@ class RecordingManager : ObservableObject {
     func stopRecording() {
         audioRecorder?.stop()
         print("Recording stopped")
+//        Call the API with the file path being
+//        recordingPath?.absoluteString
+    }
+    
+    func showTranscription(_ transcription : String) {
+        setStatus(Status.ready)
+        self.transcription = transcription
     }
     
     enum Status {
