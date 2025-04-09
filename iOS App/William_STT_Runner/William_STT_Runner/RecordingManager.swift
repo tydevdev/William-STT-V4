@@ -1,6 +1,6 @@
 //
 //  RecordingManager.swift
-//  Local STT Model Runner
+//  William_STT_Runner
 //
 //  Created by Dari Gomez on 4/8/25.
 //

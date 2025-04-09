@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Local STT Model Runner
+//  William_STT_Runner
 //
 //  Created by Ty DeVito on 3/31/25.
 //

@@ -1,6 +1,6 @@
 //
-//  Local_STT_Model_RunnerApp.swift
-//  Local STT Model Runner
+//  William_STT_RunnerApp.swift
+//  William_STT_Runner
 //
 //  Created by Ty DeVito on 3/31/25.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 
 @main
-struct Local_STT_Model_RunnerApp: App {
+struct William_STT_RunnerApp: App {
     @StateObject var recordingManager = RecordingManager(status: RecordingManager.Status.busy)
     
     init() {
