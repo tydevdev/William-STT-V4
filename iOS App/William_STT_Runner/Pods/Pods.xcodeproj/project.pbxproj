@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = "LibTorch-Lite";
+			productName = "LibTorch-Lite";
 		};
 /* End PBXAggregateTarget section */
 
@@ -43,10 +44,10 @@
 		5B8B8B9DFD4F84601DFEB0C1CEB2DA65 /* libcpuinfo.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcpuinfo.a; path = install/lib/libcpuinfo.a; sourceTree = "<group>"; };
 		61198A6E8A40D6DB5B292C53D7FD48B3 /* libc10.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libc10.a; path = install/lib/libc10.a; sourceTree = "<group>"; };
 		8E150A89488915E59AF11456FA5D8909 /* Pods-William_STT_Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-William_STT_Runner-dummy.m"; sourceTree = "<group>"; };
-		9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-William_STT_Runner"; path = "libPods-William_STT_Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9111F3234C43C5D651840D09E7880325 /* libPods-William_STT_Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-William_STT_Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		974C78721778701A8EDA08A253AC2521 /* libpytorch_qnnpack.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpytorch_qnnpack.a; path = install/lib/libpytorch_qnnpack.a; sourceTree = "<group>"; };
 		9B44FDAE5AA81D10912DD5E85C109384 /* Pods-William_STT_Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-William_STT_Runner.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F58DEC2B8DF324316CDD9C0FB829C17 /* libeigen_blas.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libeigen_blas.a; path = install/lib/libeigen_blas.a; sourceTree = "<group>"; };
 		A15A8D5843824255271C30AB9EE1500F /* LibTorch-Lite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LibTorch-Lite.h"; path = "src/LibTorch-Lite.h"; sourceTree = "<group>"; };
 		BB32920385680BA018B5AE7A2D6E22ED /* LibTorch-Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LibTorch-Lite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 				A6A0D34DA2A3E5F0B222EBAD106B086C /* Support Files */,
 				69B6EED10055B2C3E50497F0372CEF81 /* Torch */,
 			);
-			name = "LibTorch-Lite";
 			path = "LibTorch-Lite";
 			sourceTree = "<group>";
 		};
@@ -112,7 +112,7 @@
 		92C1D25BA99EA9F1C81B96A39D301167 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */,
+				9111F3234C43C5D651840D09E7880325 /* libPods-William_STT_Runner.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			);
 			name = "Pods-William_STT_Runner";
 			productName = "Pods-William_STT_Runner";
-			productReference = 9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */;
+			productReference = 9111F3234C43C5D651840D09E7880325 /* libPods-William_STT_Runner.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -212,8 +212,9 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1630;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 16.0";
@@ -224,8 +225,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 92C1D25BA99EA9F1C81B96A39D301167 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,6 +310,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -334,7 +334,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -377,6 +376,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -396,7 +396,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -408,7 +407,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B1DF4C10F17A8C9E5915DBCA10C0D6D /* Pods-William_STT_Runner.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -433,7 +431,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B44FDAE5AA81D10912DD5E85C109384 /* Pods-William_STT_Runner.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
