@@ -1,17 +1,28 @@
+# Ignore all .wav files in Model Training subfolders
 Model Training/**/*.wav
+
+# Ignore PyTorch model files
 *.pt
 *.pth
 
-
-# CocoaPods
+# CocoaPods: ignore the Pods folder
 /Pods/
 
-# Xcode workspace (not the project file)
+# Xcode:
+# Ignore Xcode workspace files (not the project file)
 *.xcworkspace
-
-# Xcode user data and derived data
+# Ignore Xcode user data and derived data
 *.xcuserstate
 *.xcuserdata
 
 # macOS system files
 .DS_Store
+
+# Visual Studio Code:
+# Ignore VSCode settings folder and workspace files
+.vscode/
+*.code-workspace
+
+# (Optional) Other common ignores:
+# Node modules if you work with JavaScript/TypeScript in VSCode
+node_modules/
