@@ -2,3 +2,5 @@ Model Training/**/*.wav
 **/*.pt
 **/*.pth
 **/.venv
+.DS_Store
+*.wav
