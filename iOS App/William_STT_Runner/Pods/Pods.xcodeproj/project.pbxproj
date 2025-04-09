@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E57795E3793A5B4B3FCB20B96C38D2AA /* LibTorch-Lite */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 49B45E12905593CF3F5392688CB741CB /* Build configuration list for PBXAggregateTarget "LibTorch-Lite" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "LibTorch-Lite";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8D983CCCB9BB3F028EE3C3FC69601995 /* Pods-William_STT_Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E150A89488915E59AF11456FA5D8909 /* Pods-William_STT_Runner-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6035096F380A324D99D3A8E7D59D8511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E57795E3793A5B4B3FCB20B96C38D2AA;
+			remoteInfo = "LibTorch-Lite";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02EF80FD8A925750FFE2A458251D99F7 /* libXNNPACK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libXNNPACK.a; path = install/lib/libXNNPACK.a; sourceTree = "<group>"; };
+		04448A832C8315AA613CB0272E7654F4 /* Pods-William_STT_Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-William_STT_Runner-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BDA91965F4138D4B2ECA37567D2B8E4 /* LibTorch-Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LibTorch-Lite.release.xcconfig"; sourceTree = "<group>"; };
+		30A4B0AAE44BCEA5343973E47D799692 /* libtorch.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch.a; path = install/lib/libtorch.a; sourceTree = "<group>"; };
+		3B1DF4C10F17A8C9E5915DBCA10C0D6D /* Pods-William_STT_Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-William_STT_Runner.release.xcconfig"; sourceTree = "<group>"; };
+		3C4DD7F386E25DC01F37DFA0D0924E70 /* Pods-William_STT_Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-William_STT_Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53796E6136F0997463719047F18D8E00 /* libtorch_cpu.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch_cpu.a; path = install/lib/libtorch_cpu.a; sourceTree = "<group>"; };
+		5B8B8B9DFD4F84601DFEB0C1CEB2DA65 /* libcpuinfo.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcpuinfo.a; path = install/lib/libcpuinfo.a; sourceTree = "<group>"; };
+		61198A6E8A40D6DB5B292C53D7FD48B3 /* libc10.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libc10.a; path = install/lib/libc10.a; sourceTree = "<group>"; };
+		8E150A89488915E59AF11456FA5D8909 /* Pods-William_STT_Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-William_STT_Runner-dummy.m"; sourceTree = "<group>"; };
+		9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-William_STT_Runner"; path = "libPods-William_STT_Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		974C78721778701A8EDA08A253AC2521 /* libpytorch_qnnpack.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpytorch_qnnpack.a; path = install/lib/libpytorch_qnnpack.a; sourceTree = "<group>"; };
+		9B44FDAE5AA81D10912DD5E85C109384 /* Pods-William_STT_Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-William_STT_Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F58DEC2B8DF324316CDD9C0FB829C17 /* libeigen_blas.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libeigen_blas.a; path = install/lib/libeigen_blas.a; sourceTree = "<group>"; };
+		A15A8D5843824255271C30AB9EE1500F /* LibTorch-Lite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LibTorch-Lite.h"; path = "src/LibTorch-Lite.h"; sourceTree = "<group>"; };
+		BB32920385680BA018B5AE7A2D6E22ED /* LibTorch-Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LibTorch-Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		C7A24B0DA2EBEAC97D8D2E6BC9E3DAB0 /* libfmt.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libfmt.a; path = install/lib/libfmt.a; sourceTree = "<group>"; };
+		C9E2E047BBFE8ACED19944A6D85FE863 /* libpthreadpool.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpthreadpool.a; path = install/lib/libpthreadpool.a; sourceTree = "<group>"; };
+		E0F3420FBE1D810E109940403ED15E83 /* libclog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libclog.a; path = install/lib/libclog.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92163D2464A89A37914D9A4D24076E56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		103646D78E479621B0C3C0AA56B72B98 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D35A19C6546E9FFEF447B3175670BAD /* Pods-William_STT_Runner */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1AA4279CAE8B4D572FBC31C589329D4A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A15A8D5843824255271C30AB9EE1500F /* LibTorch-Lite.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		33C0F4EA81608377907D7D4873F47DCB /* LibTorch-Lite */ = {
+			isa = PBXGroup;
+			children = (
+				1AA4279CAE8B4D572FBC31C589329D4A /* Core */,
+				A6A0D34DA2A3E5F0B222EBAD106B086C /* Support Files */,
+				69B6EED10055B2C3E50497F0372CEF81 /* Torch */,
+			);
+			name = "LibTorch-Lite";
+			path = "LibTorch-Lite";
+			sourceTree = "<group>";
+		};
+		51B32A712B5F7E0AEE457383D7680746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33C0F4EA81608377907D7D4873F47DCB /* LibTorch-Lite */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		69B6EED10055B2C3E50497F0372CEF81 /* Torch */ = {
+			isa = PBXGroup;
+			children = (
+				B0F239CEBF2BD7E927053507C44041F0 /* Frameworks */,
+			);
+			name = Torch;
+			sourceTree = "<group>";
+		};
+		92C1D25BA99EA9F1C81B96A39D301167 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D35A19C6546E9FFEF447B3175670BAD /* Pods-William_STT_Runner */ = {
+			isa = PBXGroup;
+			children = (
+				3C4DD7F386E25DC01F37DFA0D0924E70 /* Pods-William_STT_Runner-acknowledgements.markdown */,
+				04448A832C8315AA613CB0272E7654F4 /* Pods-William_STT_Runner-acknowledgements.plist */,
+				8E150A89488915E59AF11456FA5D8909 /* Pods-William_STT_Runner-dummy.m */,
+				9B44FDAE5AA81D10912DD5E85C109384 /* Pods-William_STT_Runner.debug.xcconfig */,
+				3B1DF4C10F17A8C9E5915DBCA10C0D6D /* Pods-William_STT_Runner.release.xcconfig */,
+			);
+			name = "Pods-William_STT_Runner";
+			path = "Target Support Files/Pods-William_STT_Runner";
+			sourceTree = "<group>";
+		};
+		A6A0D34DA2A3E5F0B222EBAD106B086C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB32920385680BA018B5AE7A2D6E22ED /* LibTorch-Lite.debug.xcconfig */,
+				2BDA91965F4138D4B2ECA37567D2B8E4 /* LibTorch-Lite.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LibTorch-Lite";
+			sourceTree = "<group>";
+		};
+		B0F239CEBF2BD7E927053507C44041F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61198A6E8A40D6DB5B292C53D7FD48B3 /* libc10.a */,
+				E0F3420FBE1D810E109940403ED15E83 /* libclog.a */,
+				5B8B8B9DFD4F84601DFEB0C1CEB2DA65 /* libcpuinfo.a */,
+				9F58DEC2B8DF324316CDD9C0FB829C17 /* libeigen_blas.a */,
+				C7A24B0DA2EBEAC97D8D2E6BC9E3DAB0 /* libfmt.a */,
+				C9E2E047BBFE8ACED19944A6D85FE863 /* libpthreadpool.a */,
+				974C78721778701A8EDA08A253AC2521 /* libpytorch_qnnpack.a */,
+				30A4B0AAE44BCEA5343973E47D799692 /* libtorch.a */,
+				53796E6136F0997463719047F18D8E00 /* libtorch_cpu.a */,
+				02EF80FD8A925750FFE2A458251D99F7 /* libXNNPACK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				51B32A712B5F7E0AEE457383D7680746 /* Pods */,
+				92C1D25BA99EA9F1C81B96A39D301167 /* Products */,
+				103646D78E479621B0C3C0AA56B72B98 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9D42377B45BEF9003250570FC8CA664A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		966BA69EC7140F846719E5E2CDC7B221 /* Pods-William_STT_Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA547938E1ABD0478767970F0F7D1BA /* Build configuration list for PBXNativeTarget "Pods-William_STT_Runner" */;
+			buildPhases = (
+				9D42377B45BEF9003250570FC8CA664A /* Headers */,
+				7771CC0EB45E4E1E9E467A008F4DD6F5 /* Sources */,
+				92163D2464A89A37914D9A4D24076E56 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01118F16E175D89B5590583FF0468ECD /* PBXTargetDependency */,
+			);
+			name = "Pods-William_STT_Runner";
+			productName = "Pods-William_STT_Runner";
+			productReference = 9111F3234C43C5D651840D09E7880325 /* Pods-William_STT_Runner */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 92C1D25BA99EA9F1C81B96A39D301167 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E57795E3793A5B4B3FCB20B96C38D2AA /* LibTorch-Lite */,
+				966BA69EC7140F846719E5E2CDC7B221 /* Pods-William_STT_Runner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7771CC0EB45E4E1E9E467A008F4DD6F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D983CCCB9BB3F028EE3C3FC69601995 /* Pods-William_STT_Runner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01118F16E175D89B5590583FF0468ECD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LibTorch-Lite";
+			target = E57795E3793A5B4B3FCB20B96C38D2AA /* LibTorch-Lite */;
+			targetProxy = 6035096F380A324D99D3A8E7D59D8511 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7E110063045109E887C090F29280D2F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB32920385680BA018B5AE7A2D6E22ED /* LibTorch-Lite.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A857842F32DA09B13C15A8AE88F3A7AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B1DF4C10F17A8C9E5915DBCA10C0D6D /* Pods-William_STT_Runner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E48277C7919C08B3247F5BB7DA2A2D53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B44FDAE5AA81D10912DD5E85C109384 /* Pods-William_STT_Runner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDEB02CBDAA51448F223597B63D70173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BDA91965F4138D4B2ECA37567D2B8E4 /* LibTorch-Lite.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA547938E1ABD0478767970F0F7D1BA /* Build configuration list for PBXNativeTarget "Pods-William_STT_Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E48277C7919C08B3247F5BB7DA2A2D53 /* Debug */,
+				A857842F32DA09B13C15A8AE88F3A7AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49B45E12905593CF3F5392688CB741CB /* Build configuration list for PBXAggregateTarget "LibTorch-Lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E110063045109E887C090F29280D2F1 /* Debug */,
+				FDEB02CBDAA51448F223597B63D70173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
