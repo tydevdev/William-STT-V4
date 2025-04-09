@@ -20,8 +20,6 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EBCB48512D9B666F003EA35B /* William_STT_Runner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = William_STT_Runner;
 			sourceTree = "<group>";
 		};
@@ -53,7 +51,6 @@
 				C24800D8C13CFBBC303065D9 /* Pods-William_STT_Runner.debug.xcconfig */,
 				64C4E257EF7D089998EB15D1 /* Pods-William_STT_Runner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
