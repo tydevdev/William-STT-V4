@@ -1,85 +1,81 @@
+#!/usr/bin/env python3
 import os
 import torch
+from torch.nn import functional as F
+
+# --- Monkey-patch scaled_dot_product_attention ---
+# Save the original function
+original_scaled_dot_product_attention = F.scaled_dot_product_attention
+
+def patched_scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=0.0, is_causal=False):
+    # Force is_causal to a Python bool, avoiding dynamic value issues during tracing.
+    is_causal = bool(is_causal)
+    return original_scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+
+F.scaled_dot_product_attention = patched_scaled_dot_product_attention
+# --- End monkey-patching ---
+
 import whisper
 
 def main():
-    # -------------------------------
-    # Step 1: Compute and Verify the Model File Location
-    # -------------------------------
-    # Adjust the relative path based on your project structure.
-    relative_model_path = "../../models/fine_tuned/fine_tuned_whisper_small_en_v4.pth"
-    script_dir = os.path.dirname(__file__)
-    absolute_model_path = os.path.abspath(os.path.join(script_dir, relative_model_path))
+    # Set the relative path to your fine-tuned Whisper state dictionary (.pth file)
+    relative_state_dict_path = "../../models/fine_tuned/fine_tuned_whisper_small_en_v4.pth"
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    state_dict_path = os.path.abspath(os.path.join(script_dir, relative_state_dict_path))
     
-    print("Script directory:", script_dir)
-    print("Computed model absolute path:", absolute_model_path)
-    if os.path.exists(absolute_model_path):
-        print("Model file exists.")
-    else:
-        print("Model file does NOT exist. Please check your relative path.")
+    if not os.path.exists(state_dict_path):
+        print("Error: State dict file does not exist:", state_dict_path)
         return
+    print("State dict path:", state_dict_path)
 
-    # -------------------------------
-    # Step 2: Load the Base Whisper Model Architecture
-    # -------------------------------
-    print("\nLoading the Whisper model architecture (small.en)...")
+    # Load the base Whisper model ("small.en")
+    print("Loading the Whisper model architecture (small.en)...")
     model = whisper.load_model("small.en")
     model.eval()  # Set the model to evaluation mode
-    
-    # -------------------------------
-    # Step 3: Load the Finetuned State Dictionary (Weights)
-    # -------------------------------
-    print("Loading the state dictionary from the model file...")
+
+    # Load the fine-tuned state dictionary into the model
+    print("Loading the state dictionary...")
     try:
-        state_dict = torch.load(absolute_model_path, map_location="cpu")
+        state_dict = torch.load(state_dict_path, map_location="cpu")
         model.load_state_dict(state_dict)
         print("State dictionary loaded successfully.")
     except Exception as e:
         print("Error loading state dictionary:", e)
         return
 
-    # -------------------------------
-    # Step 4: Test Inference with Dummy Inputs on the Original Model
-    # -------------------------------
-    print("\nRunning a test inference (Original model)...")
-    # Whisper expects a mel spectrogram of shape (batch, 80, 3000) (~30 seconds of audio)
+    # Test inference with dummy inputs
+    print("Running test inference on the original model...")
+    # Create a dummy mel spectrogram with shape [1, 80, 3000] (typically ~30 sec of audio)
     dummy_mel = torch.randn(1, 80, 3000)
+    # Create dummy tokens using Whisper's tokenizer
+    tokenizer = whisper.tokenizer.get_tokenizer(False)
+    dummy_text = "hello"
+    dummy_tokens = tokenizer.encode(dummy_text)
+    dummy_tokens_tensor = torch.tensor([dummy_tokens])
+    
     try:
-        # Create dummy tokens using the Whisper tokenizer.
-        tokenizer = whisper.tokenizer.get_tokenizer(False)
-        dummy_text = "hello"
-        dummy_tokens = tokenizer.encode(dummy_text)
-        dummy_tokens_tensor = torch.tensor([dummy_tokens])
-        
         output = model(dummy_mel, tokens=dummy_tokens_tensor)
-        print("Original model test output shape:", output.shape)
+        print("Original model output shape:", output.shape)
     except Exception as e:
-        print("Error during test inference on the original model:", e)
+        print("Error during test inference:", e)
         return
 
-    # -------------------------------
-    # Step 5: Convert the Model to TorchScript
-    # -------------------------------
-    print("\nConverting the model to TorchScript using torch.jit.script()...")
+    # Convert the model to TorchScript using tracing
+    print("Converting the model to TorchScript...")
+    dummy_inputs = (dummy_mel, dummy_tokens_tensor)
     try:
-        scripted_model = torch.jit.script(model)
-        torchscript_model_path = os.path.join(script_dir, "finetuned_whisper_scripted.pt")
-        scripted_model.save(torchscript_model_path)
-        print("TorchScript model saved at:", torchscript_model_path)
+        traced_model = torch.jit.trace(model, dummy_inputs)
     except Exception as e:
-        print("Error during TorchScript conversion:", e)
+        print("Error during TorchScript tracing:", e)
         return
 
-    # -------------------------------
-    # Step 6: Load and Test the TorchScript Model
-    # -------------------------------
-    print("\nLoading the TorchScript model for verification...")
+    # Save the TorchScript (traced) model to file
+    output_path = os.path.join(script_dir, "finetuned_whisper_traced.pt")
     try:
-        scripted_model_loaded = torch.jit.load(torchscript_model_path)
-        output_scripted = scripted_model_loaded(dummy_mel, tokens=dummy_tokens_tensor)
-        print("TorchScript model test output shape:", output_scripted.shape)
+        traced_model.save(output_path)
+        print("TorchScript model saved successfully at:", output_path)
     except Exception as e:
-        print("Error during test inference on TorchScript model:", e)
+        print("Error saving TorchScript model:", e)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
