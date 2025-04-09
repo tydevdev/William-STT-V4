@@ -1,4 +1,17 @@
 Model Training/**/*.wav
 *.pt
 *.pth
+
+
+# CocoaPods
 /Pods/
+
+# Xcode workspace (not the project file)
+*.xcworkspace
+
+# Xcode user data and derived data
+*.xcuserstate
+*.xcuserdata
+
+# macOS system files
+.DS_Store
