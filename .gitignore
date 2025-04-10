@@ -2,6 +2,6 @@ Model Training/**/*.wav
 **/*.pt
 **/*.pth
 **/.venv
-.DS_Store
+**/*.DS_Store
 *.wav
 *.xcuserstate
