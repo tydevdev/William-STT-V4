@@ -12,6 +12,15 @@ import SwiftUI
 class RecordingManager : ObservableObject {
     var audioRecorder: AVAudioRecorder?
     var microphoneAllowed : Bool = false
+    var tts : TTSManager
+    
+    init(status: Status) {
+        self.status = status
+        tts = TTSManager()
+        setStatus(status)
+        transcription = "Checking microphone availability..."
+        requestMicrophoneAccess()
+    }
     
     func requestMicrophoneAccess() {
         AVAudioApplication.requestRecordPermission { [weak self] allowed in
@@ -74,11 +83,11 @@ class RecordingManager : ObservableObject {
     func stopRecording() {
         audioRecorder?.stop()
         print("Recording stopped")
-//        Call the API with the file path being
-//        recordingPath?.absoluteString
+        tts.beginTranscription(recordingPath!.absoluteString, callback: showTranscription)
     }
     
     func showTranscription(_ transcription : String) {
+        print(transcription)
         setStatus(Status.ready)
         self.transcription = transcription
     }
@@ -122,20 +131,13 @@ class RecordingManager : ObservableObject {
         self.status = status;
     }
     
-    init(status: Status) {
-        self.status = status
-        setStatus(status)
-        transcription = "Checking microphone availability..."
-        requestMicrophoneAccess()
-    }
-    
     func OnPressButton() {
         switch status {
         case Status.ready:
             setStatus(Status.active)
             startRecording()
         case Status.active:
-            setStatus(Status.ready)
+            setStatus(Status.busy)
             stopRecording()
         default:
             fatalError("Unkown status. Is the button disabled?")

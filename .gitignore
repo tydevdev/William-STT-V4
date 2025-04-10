@@ -4,3 +4,4 @@ Model Training/**/*.wav
 **/.venv
 .DS_Store
 *.wav
+*.xcuserstate
