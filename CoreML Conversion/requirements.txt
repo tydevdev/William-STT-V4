@@ -1,4 +1,4 @@
-torch==2.6.0
+torch==2.5.0
 numpy
 tqdm
 jiwer
@@ -7,3 +7,7 @@ pysoundfile
 torchvision
 torchaudio
 transformers
+coremltools
+onnx
+jupyter
+tensorflow
