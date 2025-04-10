@@ -1,0 +1,9 @@
+torch==2.6.0
+numpy
+tqdm
+jiwer
+git+https://github.com/openai/whisper.git
+pysoundfile
+torchvision
+torchaudio
+transformers
