@@ -6,13 +6,47 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EB8D6DBA2DA85F520004E143 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8D6DB92DA85F520004E143 /* AVFoundation.framework */; };
+		EB8D738B2DA8635F0004E143 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = EB8D73852DA863400004E143 /* ggml.c */; };
+		EB8D739B2DA866390004E143 /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB8D73892DA863450004E143 /* whisper.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		EB8D6DB92DA85F520004E143 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EB8D73842DA863400004E143 /* ggml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ggml.h; sourceTree = "<group>"; };
+		EB8D73852DA863400004E143 /* ggml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ggml.c; sourceTree = "<group>"; };
+		EB8D73862DA863400004E143 /* ggml-cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-cpu.h"; sourceTree = "<group>"; };
+		EB8D73872DA863400004E143 /* ggml-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-impl.h"; sourceTree = "<group>"; };
+		EB8D73882DA863450004E143 /* whisper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whisper.h; sourceTree = "<group>"; };
+		EB8D73892DA863450004E143 /* whisper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = whisper.cpp; sourceTree = "<group>"; };
+		EB8D738A2DA863450004E143 /* whisper-arch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisper-arch.h"; sourceTree = "<group>"; };
+		EB8D73952DA864FB0004E143 /* ggml-backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-backend.h"; sourceTree = "<group>"; };
+		EB8D73962DA865080004E143 /* ggml-threading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-threading.h"; sourceTree = "<group>"; };
+		EB8D73972DA865130004E143 /* ggml-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-quants.h"; sourceTree = "<group>"; };
+		EB8D73982DA865610004E143 /* ggml-alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-alloc.h"; sourceTree = "<group>"; };
+		EB8D73992DA865700004E143 /* gguf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gguf.h; sourceTree = "<group>"; };
+		EB8D739A2DA865810004E143 /* ggml-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-common.h"; sourceTree = "<group>"; };
+		EB8D739C2DA8664B0004E143 /* ggml-cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ggml-cpp.h"; sourceTree = "<group>"; };
 		EBCB484F2D9B666F003EA35B /* Local STT Model Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local STT Model Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		EB8D738E2DA863850004E143 /* Exceptions for "Local STT Model Runner" folder in "Copy Bundle Resources" phase from "Local STT Model Runner" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = EBCB484D2D9B666F003EA35B /* Resources */;
+			membershipExceptions = (
+				"Local_STT_Model_Runner-Bridging-Header.h",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EBCB48512D9B666F003EA35B /* Local STT Model Runner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EB8D738E2DA863850004E143 /* Exceptions for "Local STT Model Runner" folder in "Copy Bundle Resources" phase from "Local STT Model Runner" target */,
+			);
 			path = "Local STT Model Runner";
 			sourceTree = "<group>";
 		};
@@ -23,16 +57,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8D6DBA2DA85F520004E143 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB8D6DB82DA85F520004E143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D6DB92DA85F520004E143 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB8D73822DA8632E0004E143 /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D73882DA863450004E143 /* whisper.h */,
+				EB8D73892DA863450004E143 /* whisper.cpp */,
+				EB8D738A2DA863450004E143 /* whisper-arch.h */,
+			);
+			path = Whisper;
+			sourceTree = "<group>";
+		};
+		EB8D73832DA863380004E143 /* GGML */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D739C2DA8664B0004E143 /* ggml-cpp.h */,
+				EB8D73842DA863400004E143 /* ggml.h */,
+				EB8D73952DA864FB0004E143 /* ggml-backend.h */,
+				EB8D73962DA865080004E143 /* ggml-threading.h */,
+				EB8D73982DA865610004E143 /* ggml-alloc.h */,
+				EB8D739A2DA865810004E143 /* ggml-common.h */,
+				EB8D73852DA863400004E143 /* ggml.c */,
+				EB8D73972DA865130004E143 /* ggml-quants.h */,
+				EB8D73862DA863400004E143 /* ggml-cpu.h */,
+				EB8D73992DA865700004E143 /* gguf.h */,
+				EB8D73872DA863400004E143 /* ggml-impl.h */,
+			);
+			path = GGML;
+			sourceTree = "<group>";
+		};
 		EBCB48462D9B666F003EA35B = {
 			isa = PBXGroup;
 			children = (
+				EB8D73832DA863380004E143 /* GGML */,
+				EB8D73822DA8632E0004E143 /* Whisper */,
 				EBCB48512D9B666F003EA35B /* Local STT Model Runner */,
+				EB8D6DB82DA85F520004E143 /* Frameworks */,
 				EBCB48502D9B666F003EA35B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,10 +152,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					EBCB484E2D9B666F003EA35B = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1630;
 					};
 				};
 			};
@@ -119,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8D739B2DA866390004E143 /* whisper.cpp in Sources */,
+				EB8D738B2DA8635F0004E143 /* ggml.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +237,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AR26N39755;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -228,6 +306,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AR26N39755;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -259,12 +338,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Local STT Model Runner/Preview Content\"";
-				DEVELOPMENT_TEAM = AR26N39755;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/GGML";
 				INFOPLIST_FILE = "Local-STT-Model-Runner-Info.plist";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
@@ -283,6 +363,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tydevito.Local-STT-Model-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Local STT Model Runner/Local_STT_Model_Runner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,12 +375,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Local STT Model Runner/Preview Content\"";
-				DEVELOPMENT_TEAM = AR26N39755;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/GGML";
 				INFOPLIST_FILE = "Local-STT-Model-Runner-Info.plist";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
@@ -317,6 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tydevito.Local-STT-Model-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Local STT Model Runner/Local_STT_Model_Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
